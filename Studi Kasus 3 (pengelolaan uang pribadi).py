@@ -1,7 +1,7 @@
 # Daftar untuk menyimpan transaksi
 transaksi = []
 
-# Fungsi untuk menginput transaksi
+# Fungsi untuk menginput dan menambahkan transaksi
 def tambah_transaksi():
     tipe = input("Masukkan tipe transaksi (pemasukan/pengeluaran): ").strip().lower()
     if tipe not in ['pemasukan', 'pengeluaran']:
@@ -44,37 +44,29 @@ def saldo_akhir():
     return saldo
 
 # Fungsi utama untuk menjalankan program
-def main():
-    while True:
-        print("\nPilih opsi:")
-        print("1. Tambah Transaksi")
-        print("2. Tampilkan Semua Transaksi")
-        print("3. Total Pemasukan")
-        print("4. Total Pengeluaran")
-        print("5. Saldo Akhir")
-        print("6. Keluar")
+while True:
+    print("\nPilih opsi:")
+    print("1. Tambah Transaksi")
+    print("2. Tampilkan Semua Transaksi")
+    print("3. Total Pemasukan")
+    print("4. Total Pengeluaran")
+    print("5. Saldo Akhir")
+    print("6. Keluar")
 
-        pilihan = input("Masukkan pilihan (1/2/3/4/5/6): ").strip()
+    pilihan = input("Masukkan pilihan (1/2/3/4/5/6): ").strip()
 
-        if pilihan == '1':
-            tambah_transaksi()
-        elif pilihan == '2':
-            tampilkan_transaksi()
-        elif pilihan == '3':
-            total_pemasukan()
-        elif pilihan == '4':
-            total_pengeluaran()
-        elif pilihan == '5':
-            saldo_akhir()
-        elif pilihan == '6':
-            print("Terima kasih telah menggunakan program ini.")
-            break
-        else:
-            print("Pilihan tidak valid! Silakan coba lagi.")
-
-# Jalankan program utama
-if __name__ == "__main__": 
- # fungsi if __name__ == "__main__ : ini adalah menentukan apakah skrip dijalankan sebagai program utama atau diimpor sebagai modul."
- # yang dimana 'name' modul variabelnya dan 'main' program utama
- # contoh : 'name' -> def main() diubah jadi 'main' atau program utama 
-    main()
+    if pilihan == '1':
+        tambah_transaksi()
+    elif pilihan == '2':
+        tampilkan_transaksi()
+    elif pilihan == '3':
+        total_pemasukan()
+    elif pilihan == '4':
+        total_pengeluaran()
+    elif pilihan == '5':
+        saldo_akhir()
+    elif pilihan == '6':
+        print("Terima kasih telah menggunakan program ini.")
+        break
+    else:
+        print("Pilihan tidak valid! Silakan coba lagi.")
