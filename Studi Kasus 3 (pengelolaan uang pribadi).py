@@ -3,7 +3,7 @@ transaksi = []
 
 # Fungsi untuk menginput dan menambahkan transaksi
 def tambah_transaksi():
-    tipe = input("Masukkan tipe transaksi (pemasukan/pengeluaran): ").strip().lower()
+    tipe = input("Masukkan tipe transaksi (pemasukan/pengeluaran): ").lower()
     if tipe not in ['pemasukan', 'pengeluaran']:
         print("Tipe transaksi tidak valid!")
         return
@@ -53,7 +53,7 @@ while True:
     print("5. Saldo Akhir")
     print("6. Keluar")
 
-    pilihan = input("Masukkan pilihan (1/2/3/4/5/6): ").strip()
+    pilihan = input("Masukkan pilihan (1/2/3/4/5/6): ")
 
     if pilihan == '1':
         tambah_transaksi()
