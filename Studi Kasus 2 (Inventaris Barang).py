@@ -1,4 +1,4 @@
-#
+# Buat fungsi untuk menginput data barang.
 def input_data_barang():
     barang_list = []
     n = int(input("Masukkan jumlah data barang: "))
@@ -16,7 +16,7 @@ def input_data_barang():
         barang_list.append(barang)
     return barang_list
 
-#
+# Buat fungsi untuk menampilkan semua barang
 def tampilkan_data_barang(barang_list):
     for i, brg in enumerate(barang_list):
         print( )
@@ -25,7 +25,7 @@ def tampilkan_data_barang(barang_list):
         print(f"Kode Barang : {brg['kode']}")
         print(f"Jumlah Barang : {brg['jumlah']}")
 
-#
+# Buat fungsi untuk mencari barang berdasarkan kode.
 def mencari_barang(barang_list):
     kode = input("Masukkan kode barang yang dicari: ")
     found = False
@@ -40,7 +40,7 @@ def mencari_barang(barang_list):
     if not found:
         print("\nBarang dengan kode tersebut tidak ditemukan.")
 
-#
+# Buat fungsi untuk menghapus barang berdasarkan kode.
 def hapus_barang(barang_list):
     kode = input("Masukkan kode barang yang ingin dihapus: ")
     found = False
