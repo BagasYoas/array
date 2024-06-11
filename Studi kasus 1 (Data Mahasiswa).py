@@ -1,3 +1,4 @@
+# buat fungsi untuk menginput data mahasiswa
 def input_data_mahasiswa():
     mahasiswa_list = []
     n = int(input("Masukkan jumlah mahasiswa: "))
@@ -22,6 +23,7 @@ def input_data_mahasiswa():
         mahasiswa_list.append(mahasiswa)
     return mahasiswa_list
 
+#buat fungsi untuk menampilkan data mahasiswa
 def tampilkan_data_mahasiswa(mahasiswa_list):
     for i, mhs in enumerate(mahasiswa_list):
         print( )
@@ -34,11 +36,13 @@ def tampilkan_data_mahasiswa(mahasiswa_list):
         print(f"Nilai UAS : {mhs['nilai_uas']}")
         print(f"Rata-rata : {mhs['rata_rata']}")
 
+#buat fungsi untuk menghitung dan menampilkan rata-rata nilai mahasiswa
 def tampilkan_rata2_nilai_mahasiswa(mahasiswa_list):
     print("\nRata-rata nilai tiap mahasiswa:")
     for i, mhs in enumerate(mahasiswa_list):
         print(f"Mahasiswa ke-{i+1} ({mhs['nama']}): {mhs['rata_rata']}")
 
+#buat fungsi untuk mencari dan menampilkan mahasiswa dengan nilai tertinggi dan terendah
 def cari_nilai_tertinggi_terendah(mahasiswa_list):
     nilai_tertinggi = max(mahasiswa_list, key=lambda mhs: mhs['rata_rata'])
     nilai_terendah = min(mahasiswa_list, key=lambda mhs: mhs['rata_rata'])
